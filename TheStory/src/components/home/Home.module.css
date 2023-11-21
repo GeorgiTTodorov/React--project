@@ -1,28 +1,24 @@
 @import url('https://fonts.googleapis.com/css2?family=Great+Vibes&family=Inter&family=Merriweather&family=PT+Sans&family=PT+Serif&family=Playfair+Display&family=Poppins&family=Raleway:wght@200;400&family=Work+Sans&display=swap');
 
 .homePage {
-    min-height: 100vh;
-    background-image: url('https://images.unsplash.com/photo-1700422300144-713dad3a1c4a?q=80&w=1932&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
-    background-repeat: no-repeat;
-    background-position: center center;
-    background-size: 100%;
+    /* min-height: 100vh; */
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    font-family: 'Playfair Display', serif;
-    font-size: 1.5em;
-    line-height: 2;
+    font: 1.5em/2 'Playfair Display', serif;
 }
 
 .exploreSection {
     display: flex;
     flex-direction: column;
     align-items: center;
-    transform: translateY(-2em);
+    justify-content: center;
+    text-align: center;
     /* border: 2px solid rgba(18, 72, 76, 0.77); */
     padding: 1em 2em;
     text-shadow: 0.1em 0.1em rgba(46, 54, 55, 0.77);
+    min-height: 30em;
 }
 
 .exploreSection h2 {
@@ -36,13 +32,64 @@
 }
 
 .exploreBtn {
-    margin-top: 1em;
+    margin-top: 2em;
     padding: 1em;
     border-radius: 50%;
     transition: box-shadow 1s, background-color 1s;
 }
 
 .exploreBtn:hover {
-    box-shadow: 0 0 1em 1em rgba(18, 162, 162, 0.77);
-    background-color: rgba(18, 162, 162, 0.77);
+    box-shadow: 0 0 3em 2em rgba(0, 0, 0, 0.77);
+    background-color: rgba(0, 0, 0, 0.77);
+    color: #fff;
+}
+
+/* Carousel section */
+
+.carousel {
+    display: flex;
+    gap: 2em;
+    margin: 2em;
+}
+
+
+article {
+    text-align: center;
+    padding: 1em;
+    flex: 0 1 33%;
+    border-radius: 1em;
+    background-color: rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1em;
+}
+
+article img {
+    width: 100%;
+    height: auto;
+    display: block;
+    aspect-ratio: 1/1;
+}
+
+.articleImgContainer {
+    display: block;
+    max-width: 11em;
+}
+
+article p {
+    flex-grow: 1;
+}
+
+article a {
+    background-color: #ccc;
+    padding: 0 1.2em;
+    border-radius: 1.5em;
+    transition: box-shadow 1s;
+}
+
+article a:hover {
+    box-shadow: 0 0 3em 1.2em rgba(0, 0, 0, 0.77);
+    background-color: rgba(0, 0, 0, 0.2);
 }

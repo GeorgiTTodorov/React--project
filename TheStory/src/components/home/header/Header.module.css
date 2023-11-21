@@ -1,15 +1,14 @@
 header {
     display: flex;
     justify-content: space-between;
-    border-bottom: 2px solid #000;
-    background-color: #000;
 }
 
 
 ul, li, a {
     display: block;
     text-decoration: none;
-    color: #fff;
+    color: #000;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
 }
 
 ul {
@@ -39,7 +38,7 @@ nav ul {
 }
 
 
-img {
+header img {
     width: 2em;
     height: auto;
     display: block;
@@ -47,7 +46,19 @@ img {
 }
 
 .imgContainer:hover {
-    box-shadow: 0 2em 2em 4em rgba(18, 162, 162, 0.77);
-    background-color: rgba(18, 162, 162, 0.5);
+    box-shadow: 0 0 4em 4em rgba(0, 0, 0, 0.7);
+    background-color: rgba(0, 0, 0, 0.67);
+}
+
+.siteNavigation a {
+    padding: 1em;
+    border-radius: 40%;
+    transition: box-shadow 1s, background-color 1s;
+}
+
+.siteNavigation a:hover{
+    box-shadow: 0 0 4em 3em rgba(0, 0, 0, 0.77);
+    background-color: rgba(0, 0, 0, 0.77);
+    color: #fff;
 }
 

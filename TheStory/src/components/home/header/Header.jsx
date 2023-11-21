@@ -12,8 +12,8 @@ export default function Header() {
                     <li><a href="">TheStory</a></li>
                 </ul>
             </h1>
-            <nav className="site-navigation">
-                <ul>
+            <nav className={styles.siteNavigation}>
+                <ul className={styles.ulNavigation}>
                     <li><a href="">Contacts</a></li>
                     <li><a href="">About</a></li>
                     <li><a href="">Login</a></li>
