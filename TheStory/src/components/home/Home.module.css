@@ -1,0 +1,48 @@
+@import url('https://fonts.googleapis.com/css2?family=Great+Vibes&family=Inter&family=Merriweather&family=PT+Sans&family=PT+Serif&family=Playfair+Display&family=Poppins&family=Raleway:wght@200;400&family=Work+Sans&display=swap');
+
+.homePage {
+    min-height: 100vh;
+    background-image: url('https://images.unsplash.com/photo-1700422300144-713dad3a1c4a?q=80&w=1932&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Playfair Display', serif;
+    font-size: 1.5em;
+    line-height: 2;
+}
+
+.exploreSection {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transform: translateY(-2em);
+    /* border: 2px solid rgba(18, 72, 76, 0.77); */
+    padding: 1em 2em;
+    text-shadow: 0.1em 0.1em rgba(46, 54, 55, 0.77);
+}
+
+.exploreSection h2 {
+    font-size: 3em;
+    color: rgba(18, 162, 162, 0.77);
+}
+
+.exploreSection p {
+    font-size: 1.2em;
+    color: #fff;
+}
+
+.exploreBtn {
+    margin-top: 1em;
+    padding: 1em;
+    border-radius: 50%;
+    transition: box-shadow 1s, background-color 1s;
+}
+
+.exploreBtn:hover {
+    box-shadow: 0 0 1em 1em rgba(18, 162, 162, 0.77);
+    background-color: rgba(18, 162, 162, 0.77);
+}

@@ -32,18 +32,22 @@ nav ul {
     padding-right: 2em;
 }
 
-.img-container {
+.imgContainer {
     display: block;
+    overflow: hidden;
+    transition: width 1s, box-shadow 1s, background-color 1s;
 }
 
 
 img {
-    max-width: 2em;
+    width: 2em;
     height: auto;
     display: block;
+    object-fit: cover;    
 }
 
-img:hover {
-    box-shadow: 0 0 1em #fff;
+.imgContainer:hover {
+    box-shadow: 0 2em 2em 4em rgba(18, 162, 162, 0.77);
+    background-color: rgba(18, 162, 162, 0.5);
 }
 

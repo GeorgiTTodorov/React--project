@@ -1,4 +1,4 @@
-import './Header.module.css'
+import styles from './Header.module.css'
 
 export default function Header() {
 
@@ -8,7 +8,7 @@ export default function Header() {
         <header className='site-header'>
             <h1 className="site-title">
                 <ul>
-                    <li className='img-container'><a href=""><img src="/src/assets/book.png" alt="" /></a></li>
+                    <li className={styles.imgContainer}><a href="" ><img src="/src/assets/book.png" alt="" /></a></li>
                     <li><a href="">TheStory</a></li>
                 </ul>
             </h1>

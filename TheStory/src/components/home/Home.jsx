@@ -1,13 +1,16 @@
-import './Home.module.css'
+import styles from './Home.module.css'
 
 export default function Home() {
 
 
     return (
         <>
-        <main>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure explicabo illo corrupti cupiditate quasi aliquam dicta in non, provident quas laboriosam atque nisi facilis vel praesentium voluptate eius nostrum? Dicta exercitationem natus voluptatem fugit laboriosam rerum deleniti consectetur possimus sit perferendis, eaque delectus impedit et quidem illum omnis quaerat. Officiis.
-            </p>
+        <main className={styles.homePage}>
+            <section className={styles.exploreSection}>
+                <h2>Nature has a story on it's own</h2>
+                <p>Explore what Nature has to offer</p>
+                <a href="" className={styles.exploreBtn}>Learn More</a>
+            </section>
         </main>
         </>
     );
