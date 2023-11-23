@@ -4,7 +4,7 @@ export default function Home() {
 
 
     return (
-        <>
+        <div className={styles.container}>
         <main className={styles.homePage}>
             <section className={styles.exploreSection}>
                 <h2>Nature has a story on it's own</h2>
@@ -35,11 +35,19 @@ export default function Home() {
                     </div>
                     <h3>Contribute</h3>
                     <p>Share your story with others</p>
-                    <a href="" className={styles.viewGallery}>Create</a>
+                    <a href="" className={styles.createContent}>Create</a>
                 </article>
             </section>
             
         </main>
-        </>
+        <section className={styles.media}>
+                <h4>The Narrative that guides us</h4>
+                <p>Inspiration comes individualy to those who seek it</p>
+                <div className={styles.buttons}>
+                    <a href="">Create Account</a>
+                    <a href="">Login</a>
+                </div>
+        </section>
+        </div>
     );
 }
