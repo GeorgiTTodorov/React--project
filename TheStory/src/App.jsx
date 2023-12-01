@@ -5,8 +5,12 @@ import Footer from "./components/footer/Footer.jsx";
 import Home from "./components/home/Home.jsx";
 import About from "./components/about/About.jsx";
 import Contacts from "./components/contacts/Contacts.jsx";
+import Gallery from "./components/gallery/Gallery.jsx";
+import Stories from "./components/stories/Stories.jsx";
 
 import "./App.css";
+import CreateStory from "./components/create-story/CreateStory.jsx";
+import LearnMore from "./components/learn-more/LearnMore.jsx";
 
 function App() {
   return (
@@ -17,6 +21,10 @@ function App() {
             <Route path="/" element={<Home />}/>
             <Route path="/about" element={<About />}/>
             <Route path="/contacts" element={<Contacts />}/>
+            <Route path="/learn-more" element={<LearnMore />}/>
+            <Route path="/gallery" element={<Gallery />} />
+            <Route path="/stories" element={<Stories />} />
+            <Route path="/stories/create" element={<CreateStory />} />
       </Routes>
 
       <Footer />

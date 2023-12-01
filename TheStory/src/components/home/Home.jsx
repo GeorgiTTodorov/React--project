@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom'
 import styles from './Home.module.css'
 
 export default function Home() {
@@ -9,7 +10,7 @@ export default function Home() {
             <section className={styles.exploreSection}>
                 <h2>Nature has a story on it's own</h2>
                 <p>Explore what Nature has to offer</p>
-                <a href="" className={styles.exploreBtn}>Learn More</a>
+                <Link to={'/learn-more'} className={styles.exploreBtn}>Learn More</Link>
             </section>
 
             <section className={styles.carousel}>
@@ -19,7 +20,7 @@ export default function Home() {
                     </div>
                     <h3>The Gallery</h3>
                     <p>A collection of documented images</p>
-                    <a href="" className={styles.viewGallery}>Explore</a>
+                    <Link to={'/gallery'} className={styles.viewGallery}>Explore</Link>
                 </article>
                 <article className={styles.stories}>
                     <div className={styles.articleImgContainer}>
@@ -27,7 +28,7 @@ export default function Home() {
                     </div>
                     <h3>Stories</h3>
                     <p>A collection of documented experiences</p>
-                    <a href="" className={styles.viewGallery}>Explore</a>
+                    <Link to={"/stories"} className={styles.viewGallery}>Explore</Link>
                 </article>
                 <article className={styles.create}>
                     <div className={styles.articleImgContainer}>
@@ -35,7 +36,7 @@ export default function Home() {
                     </div>
                     <h3>Contribute</h3>
                     <p>Share your story with others</p>
-                    <a href="" className={styles.createContent}>Create</a>
+                    <Link to={'/stories/create'} className={styles.createContent}>Create</Link>
                 </article>
             </section>
             
@@ -44,8 +45,8 @@ export default function Home() {
                 <h4>The Narrative that guides us</h4>
                 <p>Inspiration comes individualy to those who seek it</p>
                 <div className={styles.buttons}>
-                    <a href="">Create Account</a>
-                    <a href="">Login</a>
+                    <Link to="/register">Create Account</Link>
+                    <Link to="/login">Login</Link>
                 </div>
         </section>
         </div>
