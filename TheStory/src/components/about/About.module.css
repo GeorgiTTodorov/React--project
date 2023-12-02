@@ -1,0 +1,22 @@
+.about {
+    align-self: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 2em;
+    gap: 2em;
+    max-width: 20em;
+    margin-top: auto;
+    text-shadow: 0.1em 0.1em 0.1em rgba(0, 0, 0, 1);
+
+}
+
+.about p {
+    text-align: center;
+    line-height: 1.5;
+    color: #fff;
+}
+
+.about a:hover {
+   color: #fff;
+}
