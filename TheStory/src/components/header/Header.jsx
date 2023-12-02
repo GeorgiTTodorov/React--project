@@ -16,7 +16,7 @@ export default function Header() {
             </h1>
             <nav className={styles.siteNavigation}>
                 <ul className={styles.ulNavigation}>
-                    <li><Link to='/contacts'>Contacts</Link></li>
+                    <li><Link to='/contact-us'>Contact us</Link></li>
                     <li><Link to='/about'>About</Link></li>
                     <li><Link to='/login'>Login</Link></li>
                     <li><Link to='/register'>Register</Link></li>

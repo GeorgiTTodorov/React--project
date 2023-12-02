@@ -3,7 +3,7 @@ import { Routes, Route } from "react-router-dom";
 import Header from "./components/header/Header.jsx";
 import Footer from "./components/footer/Footer.jsx";
 import Home from "./components/home/Home.jsx";
-import Contacts from "./components/contacts/Contacts.jsx";
+import ContactUs from "./components/contact-us/ContactUs.jsx";
 import About from "./components/about/About.jsx";
 import Login from "./components/login/LoginForm.jsx";
 import Register from "./components/register/RegisterForm.jsx";
@@ -22,7 +22,7 @@ function App() {
 
       <Routes>
             <Route path="/" element={<Home />}/>
-            <Route path="/contacts" element={<Contacts />}/>
+            <Route path="/contact-us" element={<ContactUs />}/>
             <Route path="/about" element={<About />}/>
             <Route path="/login" element={<Login />}/>
             <Route path="/register" element={<Register />}/>
