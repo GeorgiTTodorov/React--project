@@ -35,7 +35,7 @@ export default function ContactUs() {
         <form >
             <label htmlFor="email">E-mail</label>
             <input type="text" name='email' id='email' placeholder='Enter your email...' onChange={changeHandler} value={formValues.email}/>
-            <label htmlFor="desciption">What's on your mind?</label>
+            <label htmlFor="desciption">Description</label>
             <textarea name="description" id="description" cols="50" rows="10" placeholder='What you would like to share...' onChange={changeHandler} value={formValues.description}></textarea>
             <button onClick={submitHandler}>Send</button>
         </form>
