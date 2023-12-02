@@ -23,6 +23,11 @@ export default function RegisterForm() {
     const submitHandler = (e) => {
         e.preventDefault();
         console.log(formValues);
+        resetFormHandler();
+    }
+
+    const resetFormHandler = () => {
+        setFormValues(formInitialState);
     }
 
     return (
