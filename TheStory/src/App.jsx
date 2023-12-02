@@ -3,14 +3,17 @@ import { Routes, Route } from "react-router-dom";
 import Header from "./components/header/Header.jsx";
 import Footer from "./components/footer/Footer.jsx";
 import Home from "./components/home/Home.jsx";
-import About from "./components/about/About.jsx";
 import Contacts from "./components/contacts/Contacts.jsx";
+import About from "./components/about/About.jsx";
+import Login from "./components/login/LoginForm.jsx";
+import Register from "./components/register/RegisterForm.jsx";
+import LearnMore from "./components/learn-more/LearnMore.jsx";
 import Gallery from "./components/gallery/Gallery.jsx";
 import Stories from "./components/stories/Stories.jsx";
+import CreateStory from "./components/create-story/CreateStory.jsx";
 
 import "./App.css";
-import CreateStory from "./components/create-story/CreateStory.jsx";
-import LearnMore from "./components/learn-more/LearnMore.jsx";
+
 
 function App() {
   return (
@@ -19,8 +22,10 @@ function App() {
 
       <Routes>
             <Route path="/" element={<Home />}/>
-            <Route path="/about" element={<About />}/>
             <Route path="/contacts" element={<Contacts />}/>
+            <Route path="/about" element={<About />}/>
+            <Route path="/login" element={<Login />}/>
+            <Route path="/register" element={<Register />}/>
             <Route path="/learn-more" element={<LearnMore />}/>
             <Route path="/gallery" element={<Gallery />} />
             <Route path="/stories" element={<Stories />} />
