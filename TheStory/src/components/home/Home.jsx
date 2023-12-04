@@ -9,7 +9,7 @@ export default function Home() {
         <main className={styles.homePage}>
             <section className={styles.exploreSection}>
                 <h2>Nature has a story on it's own</h2>
-                <p>Explore what Nature has to offer</p>
+                <p>Explore what TheStory has to offer</p>
                 <Link to={'/learn-more'} className={styles.exploreBtn}>Learn More</Link>
             </section>
 

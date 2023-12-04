@@ -1,0 +1,41 @@
+.learnMoreSection {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    text-align: center;
+    gap: 2em;
+    position: relative;
+}
+
+.learnMoreSection img {
+    display: block;
+    width: 100%;
+    height: 42em;
+    object-fit: cover;
+    opacity: 0.7;
+}
+
+.learnMoreSection h2 {
+    flex-basis: 100%;
+}
+
+.banner {
+    flex: 0 1 20%;
+    display: block;
+    overflow: hidden;
+}
+
+.banner:hover {
+    background-color: #000;
+    cursor: pointer;
+    color: #fff;
+    box-shadow: 0 0 1em 1em rgba(0, 0, 0, 0.7);
+    position: relative;
+}
+
+
+
+
+
+
+
