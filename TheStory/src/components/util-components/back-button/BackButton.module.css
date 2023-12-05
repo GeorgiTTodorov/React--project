@@ -6,6 +6,7 @@
     padding: 0.3em 0.3em;
     border-radius: 50%;
     cursor: pointer;
+    width: 1em;
 }
 
 .backBtn:hover {

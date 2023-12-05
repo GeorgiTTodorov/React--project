@@ -1,6 +1,8 @@
 import { useState } from 'react';
+import { Link } from 'react-router-dom'
 
 import styles from './LearnMore.module.css';
+import BackButton from '../util-components/back-button/BackButton.jsx';
 
 export default function LearnMore () {
 
@@ -21,10 +23,12 @@ export default function LearnMore () {
     }
 
     return (
+    <>
+        <BackButton />
         <section className={styles.learnMoreSection}>
             <h2>These are the paths</h2>
-
                 <section className={styles.banner} onMouseOver={visibilityHandler} onMouseLeave={clearStateHandler}>
+
                     <h3 className={styles.bannerLogo} style={{display: visible === 'The Hermit' ? 'none' : 'block'}}>The Hermit</h3>
                     <img src="https://i.pinimg.com/736x/dd/ed/d4/ddedd4ba1087910e6b99ad0c2fe3177b.jpg" alt="" />
                     
@@ -32,7 +36,7 @@ export default function LearnMore () {
                         {<h3>The Hermit</h3> && visible}
                         <h4>Test</h4>
                         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore earum, laudantium omnis laborum odio commodi sit sequi officia nesciunt esse expedita amet dicta in eveniet. Ducimus veritatis totam sit, molestias quis assumenda nobis, reiciendis corporis quaerat fugiat itaque harum libero quas facere, recusandae ab aliquam nihil minus maxime velit! Eaque.</p>
-                        <a href="">Select</a>
+                        <Link to="/stories/hermit-stories">Select</Link>
                     </div>   
                 </section>
 
@@ -44,7 +48,7 @@ export default function LearnMore () {
                         {<h3>The Cruel</h3> && visible}
                         <h4>Test</h4>
                         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore earum, laudantium omnis laborum odio commodi sit sequi officia nesciunt esse expedita amet dicta in eveniet. Ducimus veritatis totam sit, molestias quis assumenda nobis, reiciendis corporis quaerat fugiat itaque harum libero quas facere, recusandae ab aliquam nihil minus maxime velit! Eaque.</p>
-                        <a href="">Select</a>
+                        <Link to="/stories/cruel-stories">Select</Link>
                     </div> 
                 </section>
 
@@ -56,10 +60,11 @@ export default function LearnMore () {
                         {<h3>The Brave</h3> && visible}
                         <h4>Test</h4>
                         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore earum, laudantium omnis laborum odio commodi sit sequi officia nesciunt esse expedita amet dicta in eveniet. Ducimus veritatis totam sit, molestias quis assumenda nobis, reiciendis corporis quaerat fugiat itaque harum libero quas facere, recusandae ab aliquam nihil minus maxime velit! Eaque.</p>
-                        <a href="">Select</a>
+                        <Link to="/stories/brave-stories">Select</Link>
                     </div> 
                 </section>
 
         </section>
+    </>
     );
 }

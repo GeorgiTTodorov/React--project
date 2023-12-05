@@ -10,6 +10,9 @@ import Register from "./components/register/RegisterForm.jsx";
 import LearnMore from "./components/learn-more/LearnMore.jsx";
 import Gallery from "./components/gallery/Gallery.jsx";
 import Stories from "./components/stories/Stories.jsx";
+import HermitStories from "./components/hermit-stories/HermitStories.jsx";
+import CruelStories from "./components/cruel-stories/CruelStories.jsx";
+import BraveStories from "./components/brave-stories/BraveStories.jsx";
 import CreateStory from "./components/create-story/CreateStory.jsx";
 
 import "./App.css";
@@ -29,6 +32,9 @@ function App() {
             <Route path="/learn-more" element={<LearnMore />}/>
             <Route path="/gallery" element={<Gallery />} />
             <Route path="/stories" element={<Stories />} />
+            <Route path="/stories/hermit-stories" element={<HermitStories />} />
+            <Route path="/stories/cruel-stories" element={<CruelStories />} />
+            <Route path="/stories/brave-stories" element={<BraveStories />} />
             <Route path="/stories/create" element={<CreateStory />} />
       </Routes>
 
