@@ -36,6 +36,7 @@ function App() {
             <Route path="/gallery/:objectId" element={<ImageDetails />} />
             <Route path="/stories" element={<Stories />} />
             <Route path="/stories/:objectId" element={<StoryDetails />} />
+            <Route path="/stories/:ownerId" element={<StoryDetails />} />
             <Route path="/stories/hermit-stories" element={<HermitStories />} />
             <Route path="/stories/cruel-stories" element={<CruelStories />} />
             <Route path="/stories/brave-stories" element={<BraveStories />} />

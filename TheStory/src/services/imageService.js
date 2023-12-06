@@ -7,4 +7,13 @@ export const getAllImages = async () => {
     const result = await response.json();
 
     return result;
-}
+};
+
+export const getOneImage = async (imageId) => {
+
+    const response = await fetch(baseUrl + '/' + imageId);
+
+    const result = await response.json();
+
+    return result;
+};
