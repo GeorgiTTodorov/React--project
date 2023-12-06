@@ -1,0 +1,44 @@
+.storyListItem {
+    display: flex;
+    flex-direction: column;
+    margin-top: 2em;
+    flex: 0 0 250px;
+    gap: 1em;
+    text-align: center;
+    justify-content: space-between;
+    box-shadow: 0 0 1em 0.5em rgba(0, 0, 0, 0.7);
+    background-color: rgba(0, 0, 0, 0.2);
+    font-size: 1.2em;
+}
+
+.storyListItem h3 {
+    padding: 0 1em;
+}
+
+.storyListItem a {
+    margin: 0.5em 3em 1em 3em;
+    padding: 0.5em 0.2em;
+    background-color: #ccc;
+    border-radius: 1.5em;
+    transition: box-shadow 1s, background-color 1s;
+}
+
+.storyListItem a:hover {
+    box-shadow: 0 0 2em 2em rgba(0, 0, 0, 0.77);
+    background-color: rgba(0, 0, 0, 0.7);
+    color: #fff;
+}
+
+.imgContainer {
+    display: block;
+    overflow: hidden;
+}
+
+.imgContainer img {
+    display: block;
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    aspect-ratio: 1/1;
+}
+
