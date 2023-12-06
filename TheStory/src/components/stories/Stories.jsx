@@ -20,12 +20,17 @@ export default function Stories() {
     }, [])
 
     return (
-        <section className={styles.stories}>
+    <>
+        <section className={styles.title}>
             <BackButton />
+            <h2>Stories</h2>
+        </section>
+        <section className={styles.stories}>
             {stories.map(story => (
                 <StoryListItem key={story.objectId} {...story} />
             ))}
 
         </section>
+    </>
     );
 }

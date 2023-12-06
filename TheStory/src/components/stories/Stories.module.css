@@ -1,4 +1,13 @@
+.title {
+    display: flex;
+    align-items: center;
+    gap: 2em;
+}
+
 .stories {
    display: flex;
-   gap: 2em;
+   flex-wrap: wrap;
+   gap: 2em; 
+   margin-left: 2.7em; 
 }
+

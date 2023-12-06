@@ -24,7 +24,10 @@ export default function Gallery() {
 
     return (
     <>
-        <BackButton />
+        <section className={styles.sectionTitle}>
+            <BackButton />
+            <h2>Gallery</h2>
+        </section>
         <section className={styles.gallery}>
             {images.map(image => (
                 (<GalleryListItem key={image.objectId} {...image}/>)

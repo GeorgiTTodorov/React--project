@@ -1,3 +1,11 @@
+.sectionTitle {
+    display: flex;
+    align-items: center;
+    gap: 2em;
+}
+
+
 .gallery {
     display: flex;
+    margin-left: 2em;
 }
