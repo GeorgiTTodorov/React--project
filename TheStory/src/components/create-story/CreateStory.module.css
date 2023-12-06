@@ -8,7 +8,7 @@
     flex-direction: column;
     align-items: center;
     gap: 3em;
-    outline: 2px solid rgba(0, 0, 0, 0.5);
+    box-shadow: 0 0 1em 1em rgba(0, 0, 0, 0.5);
     margin-top: 2em;
     font-family: 'Allura', serif;
 }
@@ -17,12 +17,13 @@
     flex-basis: 100%;
     word-spacing: 5em;
     font-size: 2em;
+    margin-top: 2em;
 }
 
 .createStory form {
     display: flex;
     justify-content: space-evenly;
-    gap: 15em;
+    gap: 10em;
 }
 
 .createStory label {
