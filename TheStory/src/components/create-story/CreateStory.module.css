@@ -61,11 +61,11 @@ form div:first-child label {
 }
 
 .createStory form div:last-child label {
-    margin: 1em 0 0 2em;
+    margin: 1em 0 0 2.7em;
 }
 
 .createStory form div:last-child textarea{
-    margin: 0 0 2em 3em;
+    margin: 0 0 2em 4em;
     font-size: 1.5em;
     color: #fff;
     background-color: #000;
@@ -74,15 +74,15 @@ form div:first-child label {
 }
 
 .createStory form button {
-    margin: 0 0 4em 2.5em;
+    margin: 0 10em 4em 5em;
     font-size: 1.2em;
-    max-width: 9em;
     color: #fff;
     background-color: #000;
-    border-radius: 0.7em;
+    border-radius: 1.5em;
     padding: 0.5em;
     font-family: 'Allura';
     font-size: 1.5em;
+    transition: box-shadow 1s, background-color 1s;
 }
 
 form button:hover {
