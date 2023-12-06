@@ -1,4 +1,7 @@
 import { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
+import * as storyService from '../../services/storyService.js';
+
 import BackButton from '../util-components/back-button/BackButton.jsx';
 
 import styles from './CreateStory.module.css';
@@ -13,6 +16,7 @@ const formInitialValues = {
 export default function CreateStory () {
 
     const [formValues, setFormValues] = useState(formInitialValues);
+    const navigate = useNavigate();
 
     const changeHandler = (e) => {
         setFormValues(state => ({
@@ -21,10 +25,14 @@ export default function CreateStory () {
         }))
     };
 
-    const submitHandler = (e) => {
+    const submitHandler = async (e) => {
+        
         e.preventDefault();
-        console.log(formValues);
+        
+        const result = await storyService.createStory(formValues);
+
         resetFormHandler();
+        navigate('/stories');
     }
 
     const resetFormHandler = () => {
