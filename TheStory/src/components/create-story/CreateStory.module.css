@@ -1,0 +1,92 @@
+.createStory {
+    display: block;
+    background-image: url('https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fclipart.info%2Fimages%2Fccovers%2F15036912169-open-book-png-image.png&f=1&nofb=1&ipt=056e1a520b7df60a245a0cf7baa24eda9f5c7acb628870c4580f2f1d78875719&ipo=images');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 3em;
+    outline: 2px solid rgba(0, 0, 0, 0.5);
+    margin-top: 2em;
+    font-family: 'Allura', serif;
+}
+
+.createStory h2 {
+    flex-basis: 100%;
+    word-spacing: 5em;
+    font-size: 2em;
+}
+
+.createStory form {
+    display: flex;
+    justify-content: space-evenly;
+    gap: 15em;
+}
+
+.createStory label {
+    font-size: 2em;
+    text-decoration: underline;
+    margin-bottom: 0.5em;
+    font-weight: bold;
+}
+
+.createStory input {
+    font-size: 1.3em;
+    color: #fff;
+    background-color: #000;
+    border-radius: 0.5em;
+    padding: 0.5em;
+}
+
+.createStory form div:first-child{
+    display: flex;
+    flex-direction: column;
+    
+}
+
+.createStory form div:first-child input {
+    margin-bottom: 0.5em;
+}
+
+form div:first-child label {
+    margin-top: 1em;
+}
+
+.createStory form div:last-child {
+    display: flex;
+    flex-direction: column;  
+}
+
+.createStory form div:last-child label {
+    margin: 1em 0 0 2em;
+}
+
+.createStory form div:last-child textarea{
+    margin: 0 0 2em 3em;
+    font-size: 1.5em;
+    color: #fff;
+    background-color: #000;
+    border-radius: 0.5em;
+    padding: 0.5em;
+}
+
+.createStory form button {
+    margin: 0 0 4em 2.5em;
+    font-size: 1.2em;
+    max-width: 9em;
+    color: #fff;
+    background-color: #000;
+    border-radius: 0.7em;
+    padding: 0.5em;
+    font-family: 'Allura';
+    font-size: 1.5em;
+}
+
+form button:hover {
+    background-color: #fff;
+    color: #000;
+    box-shadow: 0 0 1em 1em rgba(0, 0, 0, 0.5);
+}
+
