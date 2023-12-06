@@ -1,6 +1,7 @@
 import { useState } from 'react';
 
 import styles from './LoginForm.module.css';
+import BackButton from '../util-components/back-button/BackButton.jsx';
 
 const formInitialState = {
     email: '',
@@ -29,6 +30,8 @@ export default function LoginForm() {
     }
 
     return (
+        <>
+        <BackButton />
         <section className={styles.loginForm}>
         <h2>Login</h2>
         <form>
@@ -51,5 +54,6 @@ export default function LoginForm() {
             <button type='submit' onClick={submitHandler}>Submit</button>
         </form>
         </section>
+        </>
     );
 }

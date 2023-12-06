@@ -6,10 +6,11 @@
     padding: 0.3em 0.3em;
     border-radius: 50%;
     cursor: pointer;
-    width: 1em;
+    max-width: 1em;
 }
 
 .backBtn:hover {
     background-color: rgba(92, 61, 61, 0.6);
     color: #000;
 }
+

@@ -1,6 +1,7 @@
 import { useState } from 'react';
 
 import styles from './RegisterForm.module.css';
+import BackButton from '../util-components/back-button/BackButton.jsx';
 
 const formInitialState = {
     username: '',
@@ -31,6 +32,8 @@ export default function RegisterForm() {
     }
 
     return (
+        <>
+        <BackButton />
         <section className={styles.registerForm}>
         <h2>Register</h2>
         <form>
@@ -69,5 +72,6 @@ export default function RegisterForm() {
             <button type='submit' onClick={submitHandler}>Submit</button>
         </form>
         </section>
+        </>
     );
 }
