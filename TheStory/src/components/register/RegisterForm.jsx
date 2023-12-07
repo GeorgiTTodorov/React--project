@@ -1,4 +1,6 @@
 import { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
+import * as userService from '../../services/userService.js';
 
 import styles from './RegisterForm.module.css';
 import BackButton from '../util-components/back-button/BackButton.jsx';
@@ -13,6 +15,7 @@ const formInitialState = {
 export default function RegisterForm() {
 
     const [formValues, setFormValues] = useState(formInitialState);
+    const navigate = useNavigate();
 
     const changeHandler = (e) => {
         setFormValues(state => ({
@@ -21,9 +24,13 @@ export default function RegisterForm() {
         }))
     };
 
-    const submitHandler = (e) => {
+    const submitHandler = async (e) => {
         e.preventDefault();
-        console.log(formValues);
+        
+        await userService.registerUser(formValues.username ,formValues.email, formValues.password);
+
+        navigate('/');
+
         resetFormHandler();
     }
 
