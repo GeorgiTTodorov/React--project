@@ -17,7 +17,16 @@ export const getStoryById = async (id) => {
     const result = await response.json();
 
     return result;
-}
+};
+
+export const getUserStories = async (id) => {
+
+    const response = await fetch(baseUrl + `?where=ownerId%3D'${id}'`);
+
+    const result = await response.json();
+
+    return result;
+};
 
 export const createStory = async (storyData) => {
 

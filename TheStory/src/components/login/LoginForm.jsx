@@ -36,7 +36,7 @@ export default function LoginForm() {
             setFormValues(formInitialState);
             return;
         } else {
-            localStorage.setItem('user', JSON.stringify({name:result.name, email:result.email, token:result['user-token'], id:result.ownerId}));
+            localStorage.setItem('user', JSON.stringify({name:result.name, email:result.email, token:result['user-token'], id:result.ownerId, imageUrl: result.imageUrl}));
             resetFormHandler(); 
         }
 
@@ -45,7 +45,7 @@ export default function LoginForm() {
 
     const resetFormHandler = () => {
         setFormValues(formInitialState);
-        navigate('/')
+        navigate('/user/dashboard');
     }
 
     return (

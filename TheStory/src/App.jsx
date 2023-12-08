@@ -18,6 +18,9 @@ import CreateStory from "./components/create-story/CreateStory.jsx";
 import StoryDetails from "./components/story-details/StoryDetails.jsx";
 
 import "./App.css";
+import UserDashboard from "./components/user-components/profile/dashboard/UserDashboard.jsx";
+import UserProfile from "./components/user-components/profile/UserProfile.jsx";
+import EditProfile from "./components/user-components/profile/profile-edit/EditProfile.jsx";
 
 
 function App() {
@@ -41,6 +44,9 @@ function App() {
             <Route path="/stories/cruel-stories" element={<CruelStories />} />
             <Route path="/stories/brave-stories" element={<BraveStories />} />
             <Route path="/stories/create" element={<CreateStory />} />
+            <Route path="/user/dashboard" element={<UserDashboard />} />
+            <Route path="/user/profile" element={<UserProfile />} />
+            <Route path="/user/profile/edit" element={<EditProfile />} />
       </Routes>
 
       <Footer />
