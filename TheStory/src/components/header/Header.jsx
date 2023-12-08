@@ -23,7 +23,7 @@ export default function Header() {
             setToken(user.token);
         }
 
-    }, [token]);
+    }, [isLoggedIn]);
 
     const logout = () => {
         
