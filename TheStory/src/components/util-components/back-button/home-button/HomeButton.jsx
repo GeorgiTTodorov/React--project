@@ -23,7 +23,7 @@ export default function HomeButton() {
     const goHome = () => {
 
         if (isLoggedIn) {
-            navigate('/dashboard')
+            navigate('/user/dashboard')
 
         } else {
             navigate('/');
