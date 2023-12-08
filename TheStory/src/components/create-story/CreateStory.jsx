@@ -28,11 +28,26 @@ export default function CreateStory () {
     const submitHandler = async (e) => {
         
         e.preventDefault();
+        const userData = localStorage.getItem('user');
+        let owner = {};
         
-        const result = await storyService.createStory(formValues);
+        if (userData) {
+            owner = JSON.parse(userData);
+        }
 
-        resetFormHandler();
-        navigate('/stories');
+        if (formValues.title === '' || formValues.imageUrl === '' || formValues.genre === '' || formValues.text === '') {
+            return;
+
+        } else if(!formValues.imageUrl.includes('https://')) {
+            return;
+            
+        } else {
+            const result = await storyService.createStory({...formValues, ownerName: owner.name, token: owner.token});
+            resetFormHandler();
+            navigate('/stories');
+
+        }
+        
     }
 
     const resetFormHandler = () => {
@@ -52,7 +67,7 @@ export default function CreateStory () {
                         <input type="text" name='title' id='title' onChange={changeHandler} value={formValues.title}/>
                         <label htmlFor="imageUrl">Image:</label>
                         <input type="text" name='imageUrl' id='imageUrl' placeholder='Place an image URL here' onChange={changeHandler} value={formValues.imageUrl}/>
-                        <label htmlFor="title">Genre:</label>
+                        <label htmlFor="genre">Genre:</label>
                         <input type="text" name='genre' id='genre' onChange={changeHandler} value={formValues.genre}/>
                     </div>
                     <div className='textarea'>
