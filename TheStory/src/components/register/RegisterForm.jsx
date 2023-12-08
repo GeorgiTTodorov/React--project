@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
+
 import * as userService from '../../services/userService.js';
 
 import styles from './RegisterForm.module.css';
@@ -14,7 +15,8 @@ const formInitialState = {
 
 export default function RegisterForm() {
 
-    const [formValues, setFormValues] = useState(formInitialState);
+    const [ formValues, setFormValues ] = useState(formInitialState);
+    const [ error, setError ] = useState('');
     const navigate = useNavigate();
 
     const changeHandler = (e) => {
@@ -27,18 +29,25 @@ export default function RegisterForm() {
     const submitHandler = async (e) => {
         e.preventDefault();
         
-        await userService.registerUser(formValues.username ,formValues.email, formValues.password);
+        const result = await userService.registerUser(formValues.username ,formValues.email, formValues.password);
+        
+        if (result.code) {
+            setError(result.message);
+            setFormValues(formInitialState);
+            return;
+        } else {
+            resetFormHandler(); 
+        }
 
-        navigate('/');
-
-        resetFormHandler();
     }
 
     const resetFormHandler = () => {
         setFormValues(formInitialState);
+        navigate('/login');
     }
 
     return (
+        
         <>
         <BackButton />
         <section className={styles.registerForm}>
@@ -68,7 +77,7 @@ export default function RegisterForm() {
                 placeholder='Enter password...'
                 value={formValues.password} 
                 onChange={changeHandler}/>
-            <label htmlFor="re-password">Repeat password</label>
+            <label htmlFor="rePassword">Repeat password</label>
             <input 
                 type="password" 
                 name='rePassword' 
@@ -76,6 +85,7 @@ export default function RegisterForm() {
                 placeholder='Repeat password...'
                 value={formValues.rePassword} 
                 onChange={changeHandler}/>
+                {error && <p className={styles.error}>{error}</p>}
             <button type='submit' onClick={submitHandler}>Submit</button>
         </form>
         </section>
