@@ -3,8 +3,10 @@ import { useNavigate } from 'react-router-dom';
 
 import * as userService from '../../services/userService.js';
 
-import styles from './RegisterForm.module.css';
 import BackButton from '../util-components/back-button/BackButton.jsx';
+import HomeButton from '../util-components/back-button/home-button/HomeButton.jsx';
+
+import styles from './RegisterForm.module.css';
 
 const formInitialState = {
     username: '',
@@ -49,7 +51,10 @@ export default function RegisterForm() {
     return (
         
         <>
-        <BackButton />
+        <section className={styles.btns}>
+            <BackButton />
+            <HomeButton />
+        </section>
         <section className={styles.registerForm}>
         <h2>Register</h2>
         <form>

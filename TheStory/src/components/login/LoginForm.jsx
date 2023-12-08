@@ -3,8 +3,10 @@ import { useNavigate } from 'react-router-dom';
 
 import * as userService from '../../services/userService.js';
 
-import styles from './LoginForm.module.css';
 import BackButton from '../util-components/back-button/BackButton.jsx';
+import HomeButton from '../util-components/back-button/home-button/HomeButton.jsx';
+
+import styles from './LoginForm.module.css';
 
 const formInitialState = {
     email: '',
@@ -48,7 +50,10 @@ export default function LoginForm() {
 
     return (
         <>
-        <BackButton />
+        <section className={styles.btns}>
+            <BackButton />
+            <HomeButton />
+        </section>
         <section className={styles.loginForm}>
         <h2>Login</h2>
         <form>

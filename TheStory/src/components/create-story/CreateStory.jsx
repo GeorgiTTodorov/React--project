@@ -4,6 +4,7 @@ import * as storyService from '../../services/storyService.js';
 import * as imageService from '../../services/imageService.js';
 
 import BackButton from '../util-components/back-button/BackButton.jsx';
+import HomeButton from '../util-components/back-button/home-button/HomeButton.jsx';
 
 import styles from './CreateStory.module.css';
 
@@ -58,7 +59,10 @@ export default function CreateStory () {
 
     return (
     <>
-        <BackButton />
+        <section className={styles.btns}>
+            <BackButton />
+            <HomeButton />
+        </section>
         <section className={styles.createStory}>
             
                 <h2>Create Story</h2>

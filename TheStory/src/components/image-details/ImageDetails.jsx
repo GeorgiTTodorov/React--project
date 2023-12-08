@@ -2,6 +2,7 @@ import { useState, useEffect } from 'react';
 import { useParams, Link } from 'react-router-dom';
 import * as imageService from '../../services/imageService.js';
 
+import HomeButton from '../util-components/back-button/home-button/HomeButton.jsx';
 import BackButton from '../util-components/back-button/BackButton.jsx';
 
 import styles from './ImageDetails.module.css';
@@ -18,13 +19,16 @@ export default function ImageDetails() {
            setImage(result)
            
         }
-        
+
         getOne();
     }, [objectId])
 
     return (
         <>
-        <BackButton />
+        <section className={styles.btns}>
+            <BackButton />
+            <HomeButton />
+        </section>
         <section className={styles.imageDetails}>
             <h3>{image.title}</h3>
             <div className={styles.imageContainer}>

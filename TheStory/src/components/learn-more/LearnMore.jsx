@@ -1,8 +1,10 @@
 import { useState } from 'react';
 import { Link } from 'react-router-dom'
 
-import styles from './LearnMore.module.css';
 import BackButton from '../util-components/back-button/BackButton.jsx';
+import HomeButton from '../util-components/back-button/home-button/HomeButton.jsx';
+
+import styles from './LearnMore.module.css';
 
 export default function LearnMore () {
 
@@ -24,7 +26,10 @@ export default function LearnMore () {
 
     return (
     <>
-        <BackButton />
+        <section className={styles.btns}>
+            <BackButton />
+            <HomeButton />
+        </section>
         <section className={styles.learnMoreSection}>
             <h2>These are the paths</h2>
                 <section className={styles.banner} onMouseOver={visibilityHandler} onMouseLeave={clearStateHandler}>

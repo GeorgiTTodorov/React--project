@@ -1,7 +1,9 @@
 import { useState } from 'react';
 
-import styles from './ContactUs.module.css';
 import BackButton from '../util-components/back-button/BackButton.jsx';
+import HomeButton from '../util-components/back-button/home-button/HomeButton.jsx';
+
+import styles from './ContactUs.module.css';
 
 const initialFormValues = {
     email: '',
@@ -31,7 +33,10 @@ export default function ContactUs() {
 
     return (
         <>
-        <BackButton />
+        <section className={styles.btns}>
+            <BackButton />
+            <HomeButton />
+        </section>
         <section className={styles.contactForm}>
         <h2>Contact us</h2>
         <p>If you wish to contact us please leave us an e-mail</p>

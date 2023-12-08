@@ -1,11 +1,16 @@
 import BackButton from '../util-components/back-button/BackButton.jsx';
-import styles from './About.module.css'
+import HomeButton from '../util-components/back-button/home-button/HomeButton.jsx';
+
+import styles from './About.module.css';
 
 export default function About() {
 
     return (
         <>
-        <BackButton />
+        <section className={styles.btns}>
+            <BackButton />
+            <HomeButton />
+        </section>
         <section className={styles.about}>
             <h2>About this site</h2>
             <p>
