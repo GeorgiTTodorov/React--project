@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import * as storyService from '../../services/storyService.js';
+import * as imageService from '../../services/imageService.js';
 
 import BackButton from '../util-components/back-button/BackButton.jsx';
 
@@ -40,9 +41,10 @@ export default function CreateStory () {
 
         } else if(!formValues.imageUrl.includes('https://')) {
             return;
-            
+
         } else {
             const result = await storyService.createStory({...formValues, ownerName: owner.name, token: owner.token});
+            const image = await imageService.createImage({articleId: result.objectId, imageUrl: result.imageUrl, title: result.title});
             resetFormHandler();
             navigate('/stories');
 

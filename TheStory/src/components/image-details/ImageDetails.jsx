@@ -16,8 +16,9 @@ export default function ImageDetails() {
         const getOne = async () => {
            const result = await imageService.getOneImage(objectId);
            setImage(result)
+           
         }
-
+        
         getOne();
     }, [objectId])
 
@@ -29,7 +30,7 @@ export default function ImageDetails() {
             <div className={styles.imageContainer}>
                 <img src={image.imageUrl} alt="" />
             </div>
-            <Link to={`/stories/${image.ownerId}`}>Read the article</Link>
+            <Link to={`/stories/${image.articleId}`}>Read the article</Link>
         </section>
         </>
     );
