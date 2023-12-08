@@ -29,3 +29,15 @@ export const loginUser = async (login, password) => {
 
     return result;
 }
+
+export const logoutUser = async (token) => {
+
+    const response = await fetch(baseUrl + '/logout', {
+        method: 'GET',
+        headers: {
+            'user-token' : `${token}`
+        }
+    });
+
+    return response;
+}
