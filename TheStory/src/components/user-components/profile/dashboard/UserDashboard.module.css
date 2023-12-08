@@ -1,0 +1,59 @@
+.dashboard {
+    display: flex;
+    gap: 5em;
+}
+
+
+.projects {
+    display: flex;
+    flex-direction: column;
+    flex: 1 0 60%;   
+}
+
+.stories {
+    display: flex;
+    gap: 1em;
+}
+
+.userInfo {
+    flex: 0 0 30%;
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: column;
+    text-align: center;
+    gap: 1em;
+}
+
+.userInfo h2 {
+    margin-bottom: 1em;
+}
+
+.userInfo h3 {
+    font-size: 1.4em;
+}
+
+.userInfo div {
+    flex: 0 0 20%;
+    margin: 0 auto;
+    padding: 1em;
+    min-width: 15em;
+    background-color: rgba(0, 0, 0, 0.4);
+    box-shadow: 0 0 1em 1em rgba(0, 0, 0, 0.3);
+    border-radius: 1em;
+}
+
+.userInfo div a {
+    margin-top: 2em;
+    border: 1px solid blue;
+    padding: 0.5em 0;
+    max-width: 7em;
+    margin: 2em auto 0 auto;
+    background-color: #000080;
+    color: #fff;
+    border-radius: 1em;
+    transition: box-shadow 1s;
+}
+
+.userInfo div a:hover {
+    box-shadow: 0 0 1em 1em RGBA(0, 0, 128, 0.7);
+}
