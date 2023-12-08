@@ -1,4 +1,7 @@
 import { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
+
+import * as userService from '../../services/userService.js';
 
 import styles from './LoginForm.module.css';
 import BackButton from '../util-components/back-button/BackButton.jsx';
@@ -11,6 +14,8 @@ const formInitialState = {
 export default function LoginForm() {
 
     const [formValues, setFormValues] = useState(formInitialState);
+    const [ error, setError ] = useState('');
+    const navigate = useNavigate();
 
     const changeHandler = (e) => {
         setFormValues(state => ({
@@ -19,14 +24,26 @@ export default function LoginForm() {
         }))
     };
 
-    const submitHandler = (e) => {
+    const submitHandler = async (e) => {
         e.preventDefault();
-        console.log(formValues);
+
+        const result = await userService.loginUser(formValues.email, formValues.password);
+
+        if (result.code) {
+            setError(result.message);
+            setFormValues(formInitialState);
+            return;
+        } else {
+            localStorage.setItem('user', JSON.stringify({name:result.name, email:result.email, token:result['user-token'], id:result.ownerId}));
+            resetFormHandler(); 
+        }
+
         resetFormHandler();
     }
 
     const resetFormHandler = () => {
         setFormValues(formInitialState);
+        navigate('/')
     }
 
     return (
@@ -51,6 +68,7 @@ export default function LoginForm() {
                 placeholder='Enter password...'
                 value={formValues.password} 
                 onChange={changeHandler}/>
+                {error && <p className={styles.error}>{error}</p>}
             <button type='submit' onClick={submitHandler}>Submit</button>
         </form>
         </section>
