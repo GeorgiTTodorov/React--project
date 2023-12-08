@@ -6,7 +6,6 @@
 
 .stories {
    display: flex;
-   flex-wrap: wrap;
    gap: 2em; 
    margin-left: 2.7em; 
 }

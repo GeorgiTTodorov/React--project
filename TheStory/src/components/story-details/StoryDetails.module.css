@@ -1,0 +1,49 @@
+.story {
+    display: flex;
+    justify-content: space-between;
+    background-color: rgba(0, 0, 0, 0.5);
+    box-shadow: 0 0 1em 1em rgba(0, 0, 0, 0.6);
+    max-width: 70em;
+    margin: 1em auto;
+    color: #fff;
+    font-size: 1.3em;
+}
+
+.story .imgContainer {
+    flex: 0 0 40%;
+}
+
+.story .imgContainer img {
+    width: 100%;
+    height: auto;
+}
+
+.story .storyInfo {
+    flex: 0 0 60%;
+    display: flex;
+    flex-direction: column;
+    gap: 2em;
+    padding: 2em;
+    line-height: 1.6;
+}
+
+.story .storyInfo p {
+    font-size: 1.2em;
+}
+
+.story .buttons {
+    display: flex;
+    justify-content: center;
+    gap: 5em;
+}
+
+.story .buttons a {
+    color: #fff;
+    border: 1px solid #fff;
+    padding: 0.2em 1em;
+    transition: box-shadow 1s;
+}
+
+.story .buttons a:hover {
+    box-shadow:0 0 1em 1em rgba(255, 255, 255, 1);
+}

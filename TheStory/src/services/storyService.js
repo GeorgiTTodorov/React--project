@@ -10,12 +10,22 @@ export const getAllStories = async () => {
     return result;
 };
 
+export const getStoryById = async (id) => {
+
+    const response = await fetch(baseUrl + `/${id}`);
+
+    const result = await response.json();
+
+    return result;
+}
+
 export const createStory = async (storyData) => {
 
     const response = await fetch(baseUrl, {
         method: 'POST',
         headers: {
-            'content-type' : 'application/json'
+            'content-type' : 'application/json',
+            'user-token' : `${storyData.token}`
         },
         body: JSON.stringify(storyData)
     });
