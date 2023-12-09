@@ -25,9 +25,9 @@ export default function Header() {
 
     }, [isLoggedIn]);
 
-    const logout = () => {
+    const logout = async () => {
         
-        const response = userService.logoutUser(token);
+        const response = await userService.logoutUser(token);
 
         if (response.ok) {
             localStorage.removeItem('user');

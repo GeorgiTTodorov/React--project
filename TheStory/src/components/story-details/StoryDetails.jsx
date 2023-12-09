@@ -11,15 +11,25 @@ import styles from './StoryDetails.module.css';
 export default function StoryDetails () {
 
     const [ story, setStory ] = useState({});
+    const [ id, setId ] = useState('');
     const params = useParams();
+
 
     useEffect(() => {
 
         const getStory = async () => {
             const result = await storyService.getStoryById(params.objectId);
-
+            
             setStory(result);
         };
+
+            const user = localStorage.getItem('user');
+            let ownerId;
+            if (user) {
+                ownerId = JSON.parse(user.id);
+                
+                setId(ownerId)
+            }
 
             getStory();
     }, []);
@@ -39,10 +49,12 @@ export default function StoryDetails () {
                 <span>{story.genre}</span>
                 <p>{story.text}</p>
                 <span></span>
-                <div className={styles.buttons}>
+                {id === story.ownerId && (
+                    <div className={styles.buttons}>
                     <Link to={`/stories/${params.objectId}/edit`}>Edit</Link>
                     <Link to={`/stories/${params.objectId}/delete`}>Delete</Link>
                 </div>
+                )}
             </div>
         </section>
         </>
