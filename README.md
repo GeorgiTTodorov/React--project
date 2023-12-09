@@ -36,3 +36,20 @@ Create Story:
 Contact us:
 ![Contact_Us](https://github.com/GeorgiTTodorov/React--project/assets/106379153/c378b9ab-1204-4b2b-ab8f-82abb6fd847c)
 
+Gallery:
+![Gallery](https://github.com/GeorgiTTodorov/React--project/assets/106379153/e4a7db71-f852-4a97-99dd-aafb3fee8f88)
+
+Image Details:
+![Image_Details](https://github.com/GeorgiTTodorov/React--project/assets/106379153/f2c55e53-7088-4911-ae55-4eb88c23afce)
+
+Stories:
+![All_Stories](https://github.com/GeorgiTTodorov/React--project/assets/106379153/78003199-4c85-4f8a-aca3-70a4e6c1ba88)
+
+Story Details:
+![Story_Details](https://github.com/GeorgiTTodorov/React--project/assets/106379153/6fb518f9-2e5f-4f8b-85d1-2643b8b57c09)
+
+User Dashboard:
+![User_Dashboard](https://github.com/GeorgiTTodorov/React--project/assets/106379153/8b4d2209-5a7f-4ea6-be00-a305e67eeb05)
+
+
+
